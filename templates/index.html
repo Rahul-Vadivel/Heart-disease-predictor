@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Disease Prediction - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="heart-icon">❤️</span>
+                <span>CardioPredict</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/predict">Prediction</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Predict Your Heart Health</h1>
+                <p class="subtitle fade-in-delay">Advanced AI-powered heart disease risk assessment using Random Forest algorithm</p>
+                <a href="/predict" class="cta-button pulse">Get Started</a>
+            </div>
+            <div class="hero-image fade-in-delay-2">
+                <div class="heart-animation">
+                    <div class="heartbeat"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Cards Section -->
+    <section class="info-section">
+        <div class="container">
+            <h2 class="section-title">Understanding Heart Disease</h2>
+            <div class="cards-grid">
+                <div class="info-card slide-up">
+                    <div class="card-icon">🫀</div>
+                    <h3>What is Heart Disease?</h3>
+                    <p>Heart disease refers to several types of heart conditions. The most common type is coronary artery disease (CAD), which affects blood flow to the heart.</p>
+                </div>
+                <div class="info-card slide-up-delay-1">
+                    <div class="card-icon">⚠️</div>
+                    <h3>Common Symptoms</h3>
+                    <ul class="symptoms-list">
+                        <li>Chest pain or discomfort</li>
+                        <li>Shortness of breath</li>
+                        <li>Irregular heartbeat</li>
+                        <li>Fatigue and weakness</li>
+                        <li>Dizziness or lightheadedness</li>
+                    </ul>
+                </div>
+                <div class="info-card slide-up-delay-2">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Prevention Tips</h3>
+                    <ul class="prevention-list">
+                        <li>Maintain healthy weight</li>
+                        <li>Exercise regularly (30 min/day)</li>
+                        <li>Eat a balanced diet</li>
+                        <li>Don't smoke or use tobacco</li>
+                        <li>Control blood pressure & cholesterol</li>
+                        <li>Manage stress effectively</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Heart Disease Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1 in 4</div>
+                    <div class="stat-label">Deaths caused by heart disease</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Model prediction accuracy</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">13</div>
+                    <div class="stat-label">Key health parameters analyzed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Available for assessment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Enter Health Data</h3>
+                    <p>Provide your health parameters including age, blood pressure, cholesterol, and more</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>AI Analysis</h3>
+                    <p>Our Random Forest algorithm analyzes your data against thousands of patterns</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Get Results</h3>
+                    <p>Receive instant risk assessment with personalized recommendations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Check Your Heart Health?</h2>
+            <p>Get your personalized risk assessment in minutes</p>
+            <a href="/predict" class="cta-button-secondary">Start Prediction</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CardioPredict</h3>
+                    <p>AI-powered heart disease prediction system using advanced machine learning</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/predict">Prediction</a></li>
+                        <li><a href="/about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Disclaimer</h4>
+                    <p>This tool is for educational purposes only. Always consult healthcare professionals for medical advice.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CardioPredict. All rights reserved. | Powered by Random Forest ML</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

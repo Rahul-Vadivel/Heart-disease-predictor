@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Results - CardioPredict</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="heart-icon">❤️</span>
+                <span>CardioPredict</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/predict">Prediction</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Results Section -->
+    <section class="results-section">
+        <div class="container">
+            <h1 class="page-title">Your Heart Health Assessment</h1>
+            
+            <!-- Result Card -->
+            <div id="resultCard" class="result-card">
+                <div class="result-status" id="resultStatus">
+                    <div class="status-icon" id="statusIcon">❤️</div>
+                    <h2 id="statusTitle">Processing...</h2>
+                    <p id="statusDescription">Analyzing your health parameters...</p>
+                </div>
+
+                <!-- Risk Meter -->
+                <div class="risk-meter">
+                    <h3>Risk Probability</h3>
+                    <div class="probability-bars">
+                        <div class="prob-bar">
+                            <div class="prob-label">
+                                <span>No Disease</span>
+                                <span id="noDiseaseProbability">---%</span>
+                            </div>
+                            <div class="prob-bar-bg">
+                                <div class="prob-bar-fill low-risk" id="noDiseaseBar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        <div class="prob-bar">
+                            <div class="prob-label">
+                                <span>Heart Disease</span>
+                                <span id="diseaseProbability">---%</span>
+                            </div>
+                            <div class="prob-bar-bg">
+                                <div class="prob-bar-fill high-risk" id="diseaseBar" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart Visualization -->
+                <div class="chart-container">
+                    <canvas id="riskChart"></canvas>
+                </div>
+
+                <!-- Health Message -->
+                <div class="health-message" id="healthMessage">
+                    <h3>📋 Health Recommendations</h3>
+                    <p id="messageText">Loading recommendations...</p>
+                </div>
+
+                <!-- Doctor Tips -->
+                <div class="doctor-tips">
+                    <h3>💡 What to Do Next</h3>
+                    <div id="tipsContainer">
+                        <div class="tip-item">
+                            <span class="tip-icon">🏥</span>
+                            <p>Consult with a cardiologist for detailed evaluation</p>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">🥗</span>
+                            <p>Maintain a heart-healthy diet low in saturated fats</p>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">🏃</span>
+                            <p>Exercise regularly - aim for 30 minutes daily</p>
+                        </div>
+                        <div class="tip-item">
+                            <span class="tip-icon">😌</span>
+                            <p>Manage stress through meditation and relaxation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="result-actions">
+                    <a href="/predict" class="action-button primary">New Assessment</a>
+                    <a href="/" class="action-button secondary">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 CardioPredict. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/result.js') }}"></script>
+</body>
+</html>
